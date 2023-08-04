@@ -1,8 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Roboto:wght@300;400;700&display=swap');
+
+
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main__messenger {
+  position: relative;
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message__window {
+  width: 50vw;
+}
+
+.messages {
+  overflow-y: scroll;
+  position: absolute;
+  height: 26vw;
+  width: 44vw;
+}
+
+.message__single {
+  font-size: 1.2vw;
+  padding: 2px;
+  margin-top: 8px;
+}
+
+.message__form {
+  position: absolute;
+  bottom: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: auto;
+  width: 100vw;
+  padding-top: 24px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.github {
+  height: 24px;
+}
+
