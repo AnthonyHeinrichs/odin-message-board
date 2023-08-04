@@ -40,11 +40,6 @@ p {
   margin-top: 8px;
 }
 
-.message__form {
-  position: absolute;
-  bottom: 0;
-}
-
 form {
   display: flex;
   flex-direction: column;
