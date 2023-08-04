@@ -31,13 +31,19 @@ p {
   overflow-y: scroll;
   position: absolute;
   height: 26vw;
-  width: 44vw;
+  width: 46vw;
 }
 
 .message__single {
   font-size: 1.2vw;
   padding: 2px;
   margin-top: 8px;
+}
+
+.message__details {
+  margin-right: 4px;
+  display: flex;
+  justify-content: space-between;
 }
 
 form {

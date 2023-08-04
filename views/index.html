@@ -11,42 +11,15 @@
     <img class="message__window" src="../images/messenger.png" alt="messenger">
     <div class="messages">
       <div class="message__text">
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there? Where do you live and where is your favourite place to go there? Where do you live and where is your favourite place to go there? Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
-        <div class="message__single">
-          <p>Tony says:</p>
-          <p>Where do you live and where is your favourite place to go there?</p>
-        </div>
+        {{#messages}}
+          <div class="message__single">
+            <div class="message__details">
+              <p>{{name}} says:</p>
+              <p>{{posted_date}}</p>
+            </div>
+            <p>{{message}}</p>
+          </div>
+        {{/messages}}
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+require('dotenv').config();
 
 console.log(
     'This script adds some messages to your database"'
@@ -9,14 +10,35 @@ console.log(
   
   const Message = require("./models/message");
   
-  const datetime = new Date()
+  // Getting date format
+  const monthMap = {
+    0: "Jan",
+    1: "Feb",
+    2: "Mar",
+    3: "April",
+    4: "May",
+    5: "June",
+    6: "July",
+    7: "Aug",
+    8: "Sep",
+    9: "Oct",
+    10: "Nov",
+    11: "Dec",
+  }
+
+  let dateObj = new Date()
+  let day = dateObj.getUTCDate()
+  let month = monthMap[dateObj.getMonth()]
+  let year = dateObj.getFullYear()
+  let newdate = month + " " + day + ", " + year
+  
   const messages = [];
 
   const mongoose = require("mongoose");
   mongoose.set("strictQuery", false);
   
-  const mongoDB = userArgs[0];
-  
+  const mongoDB = `mongodb+srv://anthonygheinrichs:${process.env.MYDBPASS}@messages.fdusgzz.mongodb.net/?retryWrites=true&w=majority`;
+
   main().catch((err) => console.log(err));
   
   async function main() {
@@ -42,11 +64,11 @@ console.log(
   async function createMessages() {
     console.log("Adding messages");
     await Promise.all([
-      messageCreate(0, "Patrick", "What's going on!", datetime),
-      messageCreate(1, "Ben", "Hello, Patrick!", datetime),
-      messageCreate(2, "Isaac", "I'm just saying hello", datetime),
-      messageCreate(3, "Bob", "Billings", datetime),
-      messageCreate(4, "Jim", "Indiana Jones was a great film", datetime),
+      messageCreate(0, "Patrick", "What's going on!", newdate),
+      messageCreate(1, "Ben", "Hello, Patrick!", newdate),
+      messageCreate(2, "Isaac", "I'm just saying hello", newdate),
+      messageCreate(3, "Bob", "Billings", newdate),
+      messageCreate(4, "Jim", "Indiana Jones was a great film", newdate),
     ]);
   }
   
