@@ -63,19 +63,24 @@ p, h4 {
 }
 
 form {
-  width: 100vw;
+  width: 99vw;
   align-items: center;
   display: flex;
   gap: 8px;
   flex-direction: column;
 }
 
+#username {
+  width: 280px;
+}
+
 #message {
-  height: 64px;
+  width: 280px;
+  max-width: 600px;
+  max-height: 200px;
 }
 
 .message__form {
-  width: 400px;
   margin-top: calc(-25px + -4vw);
 }
 
@@ -96,7 +101,7 @@ form {
   align-items: center;
   gap: 12px;
   height: auto;
-  width: 100vw;
+  width: 99vw;
   padding-top: 24px;
 }
 
