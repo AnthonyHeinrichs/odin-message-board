@@ -10,13 +10,22 @@ a {
   color: #00B7FF;
 }
 
-p {
+p, h4 {
   margin: 0;
   padding: 0;
 }
 
-.main__messenger {
+#main {
   position: relative;
+  min-height: 100vh;
+}
+
+.main__content {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.main__messenger {
   margin-top: 48px;
   display: flex;
   justify-content: center;
@@ -24,31 +33,61 @@ p {
 }
 
 .message__window {
-  width: 50vw;
+  width: 80vw;
+  min-width: 280px;
+  max-width: 800px;
 }
 
 .messages {
   overflow-y: scroll;
   position: absolute;
-  height: 26vw;
-  width: 46vw;
+  height: calc(84px + 18vw);
+  max-height: 450px;
+  min-height: 120px;
+  width: 74vw;
+  max-width: 750px;
+  min-width: 225px;
 }
 
 .message__single {
   font-size: 1.2vw;
   padding: 2px;
   margin-top: 8px;
+  margin-left: 12px;
 }
 
 .message__details {
-  margin-right: 4px;
+  margin-right: 12px;
   display: flex;
   justify-content: space-between;
 }
 
 form {
+  width: 100vw;
+  align-items: center;
   display: flex;
+  gap: 8px;
   flex-direction: column;
+}
+
+#message {
+  height: 64px;
+}
+
+.message__form {
+  width: 400px;
+  margin-top: calc(-25px + -4vw);
+}
+
+.submit__btn {
+  color: rgb(129, 129, 129);
+  background: linear-gradient(356deg, #a3c3ff, rgb(251, 252, 255));
+  padding: 12px 18px 12px 18px;
+  border-radius: 20px;
+}
+
+.submit__btn:hover {
+  background: linear-gradient(356deg, #a1c0fc, rgb(236, 242, 255));
 }
 
 .footer--center {
@@ -63,9 +102,9 @@ form {
 
 footer {
   position: absolute;
+  width: 100%;
+  height: 2.5rem;
   bottom: 0;
-  right: 0;
-  left: 0;
 }
 
 .github {

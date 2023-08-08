@@ -7,28 +7,32 @@
   <title>{{title}}</title>
 </head>
 <body>
-  <div class="main__messenger">
-    <img class="message__window" src="../images/messenger.png" alt="messenger">
-    <div class="messages">
-      <div class="message__text">
-        {{#messages}}
-          <div class="message__single">
-            <div class="message__details">
-              <p>{{name}} says:</p>
-              <p>{{posted_date}}</p>
-            </div>
-            <p>{{message}}</p>
+  <div class="content">
+    <div class="main__content">
+      <div class="main__messenger">
+        <img class="message__window" src="../images/messenger.png" alt="messenger">
+        <div class="messages">
+          <div class="message__text">
+            {{#messages}}
+              <div class="message__single">
+                <div class="message__details">
+                  <h4>{{name}} says:</h4>
+                  <p>{{posted_date}}</p>
+                </div>
+                <p>{{message}}</p>
+              </div>
+            {{/messages}}
           </div>
-        {{/messages}}
+        </div>
+      </div>
+      <div class="message__form">
+        <form method="POST" action="/">
+          <input type="text" id="username" name="username" placeholder="name">
+          <textarea type="text" id="message" name="message" placeholder="message"></textarea>
+          <input class="submit__btn" type="submit" value="Send">
+        </form>
       </div>
     </div>
-  </div>
-  <div class="message__form">
-    <form method="POST" action="/">
-      <input type="text" id="username" name="username">
-      <input type="text" id="message" name="message">
-      <input type="submit" value="Send">
-    </form>
   </div>
   <footer class="footer--center">
     <p>Copyright © {{year}} AnthonyHeinrichs</p>

@@ -16,7 +16,7 @@ router.get('/', async function (req, res) {
   mongoose.connection.close();
 });
 
-router.post('/', async function (req, res, next) {
+router.post('/', async function (req, res) {
   addMessageToDB(req.body.username, req.body.message).catch((err) => console.log(err));
   res.redirect('/')
 })
